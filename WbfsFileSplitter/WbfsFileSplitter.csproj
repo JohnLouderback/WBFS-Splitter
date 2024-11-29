@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+
+    <ApplicationVisualStyles>true</ApplicationVisualStyles>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationDefaultFont>Tahoma, 9pt</ApplicationDefaultFont>
+    <ApplicationUseCompatibleTextRendering>true</ApplicationUseCompatibleTextRendering>
+    <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+    <ApplicationIcon>Assets\wbfs-splitter.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Common" Version="8.3.2" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup> 
+
+  <ItemGroup>
+    <ProjectReference Include="..\DarkModeForms\DarkModeForms.csproj" />
+  </ItemGroup> 
+
+</Project>
