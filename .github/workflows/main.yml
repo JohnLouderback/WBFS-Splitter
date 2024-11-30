@@ -1,0 +1,42 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build and Create Release Artifact
+    runs-on: windows-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      # Setup .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0 # Update to your target framework if needed
+      
+      # Restore dependencies
+      - name: Restore Dependencies
+        run: dotnet restore
+      
+      # Publish the application
+      - name: Publish Application
+        run: dotnet publish -c Release -r win-x64 --self-contained true -o ./publish
+      
+      # Package the published application into a zip file
+      - name: Package Published Application
+        run: Compress-Archive -Path ./publish/* -DestinationPath ./WBFSFileSplitter.zip
+        shell: pwsh
+      
+      # Upload the zip file as a build artifact
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: WBFSFileSplitter
+          path: WBFSFileSplitter.zip
