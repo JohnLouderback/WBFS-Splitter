@@ -1,6 +1,11 @@
+
+
+<p align="center">
+  <img src="./WbfsFileSplitter/Assets/wbfs-splitter.png" width="150">
+</p>
+
 **WBFS File Splitter**
 ======================
-
 A simple and lightweight Windows application for splitting large .wbfs files into 
 smaller parts, suitable for FAT32 formatted SD cards that require segmented WBFS files.
 
@@ -27,7 +32,7 @@ smaller parts, suitable for FAT32 formatted SD cards that require segmented WBFS
 --------------
 
 ### **Method 1: Using the Application Interface**
-1.  **Open the Program:**Double-click the WbfsFileSplitter.exe to launch the program.
+1.  **Open the Program:** Double-click the WbfsFileSplitter.exe to launch the program.
 2.  **Select a WBFS File:**
   *   Click the Select File button to open a file dialog.
   *   Choose a .wbfs file you want to split.
