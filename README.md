@@ -23,7 +23,7 @@ smaller parts, suitable for FAT32 formatted SD cards that require segmented WBFS
 -------------------
 
 ### **Downloading**
-1.  Head to the [Releases](./Releases) page of this repository.
+1.  Head to the [./Releases](https://github.com/JohnLouderback/WBFS-Splitter/releases) page of this repository.
 2.  Download the latest .zip file for the program.
 3.  Extract the contents to a directory of your choice.
 
